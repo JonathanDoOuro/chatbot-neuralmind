@@ -26,7 +26,7 @@ O uso do chat-gpt para esse processo foi fundamental, pois ajudou muito a implem
 
 Uma vez definido o sistema de retrieval, foi avaliado a qualidade das respostas geradas pelo gpt-3.5-turbo, onde a avaliação foi feita utilizando o mesmo dataset mas dessa vez considerando os pares de perguntas e respostas.
 
-O chat-gpt sugeriu algumas métricas como precision, recall e f1 score para computar a qualidade da resposta gerada em relação a esperada, e pesquisando encontrei um paper que introduz uma métrica chamada SAS (Semantic Answer Similarity) baseada em um cross encoder que mede a similaridade entre duas respostas.
+O chat-gpt sugeriu algumas métricas como precision, recall e f1 score para computar a qualidade da resposta gerada em relação a esperada, e pesquisando encontrei um [paper](https://arxiv.org/abs/2108.06130) que introduz uma métrica chamada SAS (Semantic Answer Similarity) baseada em um cross encoder que mede a similaridade entre duas respostas.
 
 Utilizando Langchain para fazer prompts e utilizar o gpt-3.5-turbo foi feita a avaliação do chatbot e os resultados estão na figura 3.
 
