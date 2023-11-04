@@ -1,6 +1,10 @@
 import chromadb
 from langchain.embeddings import OpenAIEmbeddings
 
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+
 class Retriever:
     def __init__(self, api_key):
         self.chroma_client = chromadb.PersistentClient(path="banco")
