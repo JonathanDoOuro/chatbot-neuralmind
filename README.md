@@ -38,10 +38,20 @@ Figura 3: Avaliação do chatbot![](documentacao/Aspose.Words.5d2592f8-437f-4af1
 
 Dessa forma o chatbot final é construído com o Text Splitter da biblioteca NLTK, gerador de embeddings ada 002 da Open AI, banco de vetores Chroma DB e gpt-3.5-turbo como large language model.
 
+# Considerações sobre o desenvolvimento
+
+O processo de desenvolvimento e experimentos estão disponíveis em um [notebook](processo_desenvolvimento/chatbot.ipynb) do google colab e a implementação final esta principalmente na pasta Domain e no arquivo main.py
+
+Para criar a aplicação final e realizar seu deployment, foi utilizado o framework Streamlit. Os dados que estão no banco de vetores que o App consulta foram gerados no [notebook](processo_desenvolvimento/chatbot.ipynb) e transferidos para o ambiente de produção somente uma vez, isto visando evitar que para todo usuário seja preciso gerar os embeddings novamente.
+
 # Como utilizar o chatbot
 
-Os experimentos estão disponíveis em um [notebook](processo_desenvolvimento/chatbot.ipynb) do google colab e a implementação final esta principalmente na pasta Domain e no arquivo main.py
 
 Para utilizar o chatbot acesse esse [link](https://chatbot-unicamp.streamlit.app/):
 
-Ou se preferir rodar localmente, pode clonar o repositório, instalar todas dependências do arquivo requirements.txt e rodar o comando `streamlit run main.py` na raiz do projeto.
+
+Ou se preferir rodar localmente:
+1. Clonar o repositório
+2. Instalar todas dependências do arquivo [requirements.txt]
+utilizando `pip install -r requirements.txt` no diretorio raiz.
+3. Rodar o comando `streamlit run main.py` na raiz do projeto.
