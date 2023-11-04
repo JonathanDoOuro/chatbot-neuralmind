@@ -38,6 +38,6 @@ Dessa forma o chatbot final é construído com o Text Splitter da biblioteca NLT
 
 Os experimentos estão disponíveis em um [notebook](experimentos) do google colab e a implementação final esta principalmente na pasta Domain e no arquivo main.py
 
-Para utilizar o chatbot acesse esse [link](https://github.com/JonathanDoOuro/chatbot-neuralmind/tree/documenta%C3%A7%C3%A3o):
+Para utilizar o chatbot acesse esse [link](https://chatbot-unicamp.streamlit.app/):
 
 Ou se preferir rodar localmente, pode clonar o repositório, instalar todas dependências do arquivo requirements.txt e rodar o comando `streamlit run main.py` na raiz do projeto.
