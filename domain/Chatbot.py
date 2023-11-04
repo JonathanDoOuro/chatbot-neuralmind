@@ -2,6 +2,8 @@ from langchain.chat_models import ChatOpenAI
 from langchain.prompts import PromptTemplate
 from domain.Retriever import Retriever
 
+import time
+
 class Chatbot:
     def __init__(self, api_key):
         self.chat = ChatOpenAI(openai_api_key=api_key,
@@ -10,10 +12,10 @@ class Chatbot:
                                 temperature=0.1)
         
         self.prompt = PromptTemplate.from_template(
-            """Considering these texts as context: {context}.
-            Give me a brilliant answer to the following question: {question}
-
-            Make sure to answer using Portuguese language.""")
+            """Contexto: {context}.
+            Pergunta: {question}.
+            
+            Resposta: """)
         
         self.chain = self.prompt | self.chat
 
@@ -29,9 +31,16 @@ class Chatbot:
 
     def answer_question(self, question):
 
+        inicio = time.time()
         context = self._get_context(question)
+        fim = time.time()
 
+        print("tempo de buscar os textos: ", fim - inicio)
+
+        inicio = time.time()
         response = self.chain.invoke({"context": context, "question": question})
+        fim = time.time()
+        print("tempo de buscar responder: ", fim - inicio)
 
         answer = response.content
 
