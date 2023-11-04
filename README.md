@@ -33,7 +33,9 @@ Figura 3: Avaliação do chatbot![](documentacao/Aspose.Words.5d2592f8-437f-4af1
 
 Dessa forma o chatbot final é construído com o Text Splitter da biblioteca NLTK, gerador de embeddings ada 002 da Open AI, banco de vetores Chroma DB e gpt-3.5-turbo como large language model.
 
-Os experimentos estão disponíveis em um [notebook](experimentos) do google colab e a implementação final é esta principalmente na pasta Domain e no arquivo main.py
+# Como utilizar o chatbot
+
+Os experimentos estão disponíveis em um [notebook](experimentos) do google colab e a implementação final esta principalmente na pasta Domain e no arquivo main.py
 
 Para utilizar o chatbot acesse esse [link](https://github.com/JonathanDoOuro/chatbot-neuralmind/tree/documenta%C3%A7%C3%A3o):
 
