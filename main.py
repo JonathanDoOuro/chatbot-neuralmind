@@ -9,6 +9,13 @@ from domain.Chatbot import Chatbot
 def main():
     st.title("Chatbot para responder dúvidas sobre o vestibular da Unicamp 2024")
 
+    st.markdown("""
+    Este é um chatbot que utiliza Retrieval Augmented Generation para responder a perguntas relacionadas ao vestibular da Unicamp 2024.
+    \n Desenvolvido por: Jonathan do Ouro.
+    """)
+
+    st.markdown("---")
+
     # Input field for API key
     api_key = st.text_input("Coloque sua API KEY da OPEN AI:")
     
