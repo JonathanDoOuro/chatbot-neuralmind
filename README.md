@@ -18,7 +18,7 @@ Dessa forma, foi realizado experimentos para encontrar uma boa configuração do
    1. [text-embedding-ada-002](https://platform.openai.com/docs/guides/embeddings/what-are-embeddings)
    1. [multilingual-e5-large](https://huggingface.co/intfloat/multilingual-e5-large)
 
-Para determinar qual das configurações era a melhor, foi desenvolvido um dataset que contém em cada tupla uma pergunta, trechos de textos relevantes para a pergunta e sua respectiva resposta. Assim, para cada pergunta foi feita uma busca semântica que retornava os textos mais similares, com esses textos da busca e os trechos relevantes associados a pergunta era calculado mean average precision, normalized discounted cumulative gain, recall at 3, precision at 3 e f1 score.! Os resultados estão na figura 2.
+Para determinar qual das configurações era a melhor, foi desenvolvido um dataset que contém em cada tupla uma pergunta, trechos de textos relevantes para a pergunta e sua respectiva resposta. Assim, para cada pergunta foi feita uma busca semântica que retornava os textos mais similares, com esses textos da busca e os trechos relevantes associados a pergunta era calculado mean average precision, normalized discounted cumulative gain, recall at 3, precision at 3 e f1 score. Os resultados estão na figura 2.
 
 Figura 2: Comparação de Métricas entre Diferentes Embeddings e Text Splitters no sistema de text retrieval![](documentacao/Aspose.Words.5d2592f8-437f-4af1-9370-3430695f089f.002.jpeg)
 
