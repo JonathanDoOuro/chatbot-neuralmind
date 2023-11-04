@@ -16,9 +16,12 @@ def main():
     answer = ""
 
     if st.button("Generate Answer"):
-        answer = chatbot.answer_question(question=question)
+        try:
+            answer = chatbot.answer_question(question=question)
+        except:
+            st.error(f"API Key is not valid")
 
-    st.text_area("Generated Answer:", answer, height=100)
+    st.text_area("Generated Answer:", answer, height=max(100, int(len(answer) * 0.5)))
 
 if __name__ == "__main__":
     main()
