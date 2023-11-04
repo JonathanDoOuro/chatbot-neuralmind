@@ -1,9 +1,10 @@
-import streamlit as st
-from domain.Chatbot import Chatbot
-
 __import__('pysqlite3')
 import sys
 sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+
+import streamlit as st
+from domain.Chatbot import Chatbot
+
 
 def main():
     st.title("Chatbot para responder dúvidas sobre o vestibular da Unicamp 2024")

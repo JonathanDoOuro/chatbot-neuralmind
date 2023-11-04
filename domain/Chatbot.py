@@ -1,11 +1,11 @@
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 from langchain.chat_models import ChatOpenAI
 from langchain.prompts import PromptTemplate
 from domain.Retriever import Retriever
 
 import time
-__import__('pysqlite3')
-import sys
-sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 
 class Chatbot:
     def __init__(self, api_key):
