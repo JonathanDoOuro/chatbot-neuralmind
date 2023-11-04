@@ -3,3 +3,4 @@ chromadb
 openai
 langchain
 pysqlite3-binary
+sqlite3
